@@ -1,3 +1,5 @@
+package Arrays;
+
 public class MaximizeTheExpression {
 
     // int Arr[N]
