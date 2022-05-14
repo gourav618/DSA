@@ -33,6 +33,58 @@ public class SlidingWindowTechnique {
         //can be solve using sliding window technique in o(N) time
         int arr1[] = {2,2,1,2,4,6,2}, k1=4, x = 2;
         printFrequencyOfXUsingSlidingWindow(arr1, k1, x);
+
+        //Given: int arr[N] ,int k -> not a window size
+        //find min no of swaps to bring all elements <= k together
+        //ex: arr[2 1 5 6 3] , k=3 swap 5 and 3 and all no <= k are group yogether
+        //o/p : 1 since 1 swaps required
+        //ex2: [2 5 7 9 8 7 4] , k = 5
+        // size of subarray where all elem<=k ?? -> find count of elem<=k in arr i.e =3 since {2,5,4} are elem<=k
+        // above is the window size since we have to chunk that no of elem atone place with min swap
+        // now we will have to count legal element in each window , since we want to keep it there and swap other legal elem in that chunk by removing illegal elem
+        // we need to track max count of legal elem in a window  i.e count of legal elem in each window [2 1 0 0 1] max_count = 2
+        // no of swaps required  = count of legal elem - max_count i.e 3-2 = 1 swap needed , since
+        // we have max_count elem already in a window and remaining legal elem must be swapped to that window
+        int arr2[] = {2,5,7,9,8,7,4} ; int k2=5;
+        int minNoOfSwapsRequiredToBringElemTogether = getMinNoOfSwapsRequiredToBringElemTogether(arr2, k2);
+        System.out.println(minNoOfSwapsRequiredToBringElemTogether);
+    }
+
+    private static int getMinNoOfSwapsRequiredToBringElemTogether(int[] arr, int k) {
+        int legalElemInArray = 0;
+        for (int i =0; i<arr.length; i++){
+            if (arr[i] <= k){
+                legalElemInArray++;
+            }
+        }
+
+        int count = 0;
+        //get count in 1st window
+        for (int i=0; i<legalElemInArray; i++){
+            if (arr[i] <= k) {
+                count++;
+            }
+        }
+
+        int max_count = Integer.MIN_VALUE;
+        //get maxt count from all window
+        for (int j = legalElemInArray; j< arr.length; j++){
+            //update max_count for each window
+            max_count = Math.max(max_count, count);
+            if (arr[j] <= k){
+                count++;
+            }
+            if (arr[j-legalElemInArray] <= k){
+                count--;
+            }
+
+        }
+        //update max_count for last window
+        max_count = Math.max(max_count, count);
+
+        //no of swap required
+        return legalElemInArray - max_count;
+
     }
 
     private static void printFrequencyOfXUsingSlidingWindow(int[] arr1, int k1, int x) {
