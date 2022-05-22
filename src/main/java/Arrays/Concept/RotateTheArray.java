@@ -1,4 +1,4 @@
-package Arrays;
+package Arrays.Concept;
 
 //Given int arr[N] and int K
 // rotate the array clockwise by k units

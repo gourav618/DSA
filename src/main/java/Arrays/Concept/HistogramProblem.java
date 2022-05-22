@@ -1,4 +1,4 @@
-package Arrays;
+package Arrays.Concept;
 
 public class HistogramProblem {
 

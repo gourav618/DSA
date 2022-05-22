@@ -1,4 +1,4 @@
-package Arrays;
+package Arrays.Concept;
 
 // given : int arr[N], int k
 //output : print sum of every subarray of size k

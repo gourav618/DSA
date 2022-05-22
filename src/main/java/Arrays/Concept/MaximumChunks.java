@@ -1,4 +1,4 @@
-package Arrays;
+package Arrays.Concept;
 
 // we have an Array a[N] i.e a permutation of numbers from 0 to N-1
 // ex: a[5] = {0,1,2,3,4} or {4,1,3,0,2} or {1,0,3,4,2} [i.e it contains elem from 0 to 4 in any form of contribution and every elem is unique]
