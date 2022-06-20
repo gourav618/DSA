@@ -21,9 +21,32 @@ public class DistinctPaths {
         int distinctPathByRecursion = getDistinctPathByRecursion(0, 0);
         System.out.println(distinctPathByRecursion);
 
+        int count[] = {0};// created array for pass by reference
+        getDistinctPathByVoidRecursion(0, 0, count);
+        System.out.println(count[0]);
+
+        // above approach are top to bottom since we fixed destination and starting from source
+        //BottomToTopApproach : source is fixed and need to start from destination
+        int distinctPathByBottomToTOpApproach = getDistinctPathByBottomToTOpApproach(m-1, n-1);
+        System.out.println(distinctPathByBottomToTOpApproach);
 
     }
 
+    private static int getDistinctPathByBottomToTOpApproach(int i, int j) {
+        if (i == 0 || j == 0){
+            return 1;
+        }
+        return getDistinctPathByBottomToTOpApproach(i,j-1)+ getDistinctPathByBottomToTOpApproach(i-1,j);
+    }
+
+    private static void getDistinctPathByVoidRecursion(int i, int j, int count[]){
+        if (i==m-1 || j==n-1){
+            count[0]++;
+            return;
+        }
+        getDistinctPathByVoidRecursion(i, j+1, count);
+        getDistinctPathByVoidRecursion(i+1, j, count);
+    }
     private static int getDistinctPathByRecursion(int i, int j) {
        if (i == m-1 || j == n-1){
            return 1;
