@@ -34,6 +34,9 @@ public class SearchInSortedRotatedArray {
 
         int arr1[] = {1,2,3,4,5,6,7};
         searchInSortedRotatedArray(3, arr1);
+
+        int arr2[] = {3,3,4,5,6,7,1,2,3,3};
+        searchInSortedRotatedArray(2,  arr2);
     }
 
     private static void searchInSortedRotatedArray(int key, int[] arr) {
@@ -75,6 +78,11 @@ public class SearchInSortedRotatedArray {
 
             if (arr[m] <= arr[arr.length-1]){
                 h = m-1;
+            }
+            //handle duplicate elem towards at starting and ending index
+            else if (arr[l] == arr[m] && arr[m] == arr[h]){
+                l++;
+                h--;
             }
             else {
                 if (arr[m] > arr[m+1]){
