@@ -1,4 +1,4 @@
-package BasicProgramming.loops.Arrays;
+package BasicProgramming.Arrays;
 
 import java.util.Arrays;
 import java.util.List;
