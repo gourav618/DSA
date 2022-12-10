@@ -1,4 +1,4 @@
-package Mathematics.Concept.Questions;
+package Mathematics.Questions;
 
 import java.util.Arrays;
 import java.util.List;
