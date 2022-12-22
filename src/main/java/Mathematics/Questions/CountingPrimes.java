@@ -5,6 +5,8 @@ import java.util.Scanner;
 
 public class CountingPrimes {
     public static void main(String[] args){
+        //https://dashboard.programmingpathshala.com/practice/question?questionId=30&sectionId=1&moduleId=1&topicId=2&subtopicId=25&assignmentId=5
+
         Scanner s = new Scanner(System.in);
         int T = s.nextInt();
         s.nextLine();
