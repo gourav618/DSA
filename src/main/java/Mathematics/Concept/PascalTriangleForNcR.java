@@ -54,7 +54,7 @@ public class PascalTriangleForNcR {
             ans -= (((long) n *(n-1))/2)*pas[m][t-2];
         }
         if (t-3<=m){
-            ans -= (((long) n *(n-1)*(n-2))/6)*pas[m][t];
+            ans -= (((long) n *(n-1)*(n-2))/6)*pas[m][t-3];
         }
         if (t<=n){
             ans -= pas[n][t];
