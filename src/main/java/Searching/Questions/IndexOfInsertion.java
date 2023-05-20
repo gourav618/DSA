@@ -7,6 +7,7 @@ import java.util.stream.Collectors;
 
 public class IndexOfInsertion {
     public static void main(String[] args){
+        //https://dashboard.programmingpathshala.com/practice/question?questionId=95&sectionId=1&moduleId=2&topicId=6&subtopicId=68&assignmentId=14
         Scanner s = new Scanner(System.in);
         int N = s.nextInt();
         s.nextLine();
