@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class SquareRootOfNumber {
     public static void main(String[] args){
+        //https://dashboard.programmingpathshala.com/practice/question?questionId=102&sectionId=1&moduleId=2&topicId=6&subtopicId=77&assignmentId=16
         Scanner s = new Scanner(System.in);
         int T = s.nextInt();
         while (T-- > 0){
