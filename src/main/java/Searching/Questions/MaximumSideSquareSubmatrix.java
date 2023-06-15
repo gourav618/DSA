@@ -59,7 +59,7 @@ public class MaximumSideSquareSubmatrix {
         long sum=0;
         for (int i=mid-1; i<m; i++){
             for (int j=mid-1; j<n; j++){
-                sum += arr[i][j] + ((i-mid>=0 && j-mid>=0)?arr[i-mid][j-mid]:0) - ((j-mid>=0)?arr[i][j-mid]:0) - ((i-mid>=0)?arr[i-mid][j]:0);
+                sum = arr[i][j] + ((i-mid>=0 && j-mid>=0)?arr[i-mid][j-mid]:0) - ((j-mid>=0)?arr[i][j-mid]:0) - ((i-mid>=0)?arr[i-mid][j]:0);
                 if (sum <= threshold) return true;
             }
         }
