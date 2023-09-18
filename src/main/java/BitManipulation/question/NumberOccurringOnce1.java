@@ -7,6 +7,7 @@ import java.io.InputStreamReader;
 public class NumberOccurringOnce1 {
     public static void main(String[] args) throws IOException {
         //https://dashboard.programmingpathshala.com/renaissance/practice/question?questionId=198&sectionId=1&moduleId=2&topicId=9&subtopicId=124&assignmentId=31
+        //https://leetcode.com/problems/single-number/
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
